@@ -142,8 +142,8 @@ int             fetchaddr(uint64, uint64*);
 void            syscall();
 extern uint total_syscalls;
 // sysinfo.c
-int count_active_procs(void);
-int count_free_pages(void);
+// int count_active_procs(void);
+// int count_free_pages(void);
 // trap.c
 extern uint     ticks;
 void            trapinit(void);

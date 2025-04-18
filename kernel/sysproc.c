@@ -114,7 +114,11 @@ sys_procinfo(void)
   // Fill the pinfo structure
   parent = p->parent;
   
-  info.ppid = parent ? parent->pid : 0;
+  if(parent) {
+    info.ppid = parent->pid;
+  } else {
+    info.ppid = 0;
+  }
   info.syscall_count = p->syscall_count;
   
   // Calculate memory usage in pages
